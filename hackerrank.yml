@@ -1,0 +1,20 @@
+version: 1
+configuration:
+  has_webserver: true
+  scoring:
+    command: npm install && npm test
+    files:
+      - unit.xml
+  readonly_paths:
+    - test/test.js
+  ide_config:
+    default_open_files:
+      - app.js
+    project_menu:
+      run: npm start
+      install: npm install
+      test: npm test
+    ports_settings:
+      "3000":
+        name: Backend
+        hidePreview: false
